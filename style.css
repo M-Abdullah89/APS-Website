@@ -155,6 +155,51 @@ main {
     text-align: center;
     opacity: 0.1;
 }
-.box-title{
-    
+.vision{
+    position: relative;
+}
+.vision-number {
+    position: absolute;
+    right: -16px;
+    bottom: 60px;
+    color: var(--text-color-3);
+    font-size: 20rem;
+    font-weight: bolder;
+    font-family: 'Segoe UI';
+    text-align: center;
+    opacity: 0.1;
+}
+.mission{
+    position: relative;
+}
+.mission-number {
+    position: absolute;
+    right: -16px;
+    bottom: 60px;
+    color: var(--text-color-3);
+    font-size: 20rem;
+    font-weight: bolder;
+    font-family: 'Segoe UI';
+    text-align: center;
+    opacity: 0.1;
+}
+
+.box-title {
+    color: var(--text-color-3);
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 17px;
+    margin-top: 50px;
+    font-family: Poppins;
+    text-align: left;
+}
+.box-content {
+    color: var(--text-color-2);
+    font-size: 1rem;
+    margin-left: 17px;
+    margin-top: 20px;
+    margin-right: 17px;
+    font-family: Poppins;
+    text-align: left;
+    width: 200px;
 }
