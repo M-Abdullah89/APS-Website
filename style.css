@@ -64,9 +64,10 @@ nav ul li a:hover {
     font-weight: bolder;
 }
 
-main {
+section {
     height: 100vh;
     width: 100%;
+    background-color: var(--bg-color);
 }
 
 .first-page {
@@ -119,9 +120,10 @@ main {
     color: var(--text-color-3);
     font-size: 3.5rem;
     font-weight: bolder;
-    margin-top: 20px;
+    margin: 50px;
     font-family: Poppins;
     text-align: center;
+    margin: 20px;
 }
 
 .second-page-content {
@@ -202,4 +204,17 @@ main {
     font-family: Poppins;
     text-align: left;
     width: 200px;
+}
+.cca-activities{
+display: flex;
+flex-direction: column;
+}
+.cca-activities-heading{
+    color: var(--text-color-3);
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 17px;
+    margin-top: 20px;
+    font-family: Poppins;
+    text-align: center;
 }
