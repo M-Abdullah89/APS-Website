@@ -109,6 +109,7 @@ section {
 }
 
 .second-page {
+    height: 110dvh;
     display: flex;
     background-color: var(--bg-color);
     flex-direction: column;
@@ -214,6 +215,8 @@ section {
 .cca-activities {
     display: flex;
     flex-direction: column;
+    height: 120dvh;
+
 }
 
 .cca-activities-heading {
@@ -227,8 +230,7 @@ section {
 }
 
 .cca-activities-content-text {
-    margin-left: 17px;
-    margin-right: 17px;
+    margin: 20px;
     font-family: Poppins;
     text-align: left;
     width: 400px;
@@ -241,5 +243,293 @@ section {
     justify-content: space-around;
 }
 
-.cca-activities-content-images {
+.cca-activities-content-images img {
+    border-radius: 12px;
+}
+
+footer,
+.end-credits {
+    height: 100px;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--element-color);
+    color: var(--text-color-2);
+    font-family: Poppins;
+    text-align: center;
+}
+
+/* Mobile First - Small Screens (320px - 480px) */
+@media (max-width: 953px) {
+    html {
+        overflow-x: hidden;
+    }
+
+
+
+    .listItems {
+        display: none;
+    }
+
+    .Title-nav {
+        font-size: large;
+    }
+
+    .first-page {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .first-page-heading {
+        font-size: 2rem;
+        margin-left: 0;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .first-page-text {
+        font-size: 0.9rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .first-page-text-area {
+        width: 100%;
+    }
+
+    .second-page {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .second-page-title {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+
+    .second-page-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .second-page-box {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .box-title {
+        font-size: 1.5rem;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .box-content {
+        font-size: 0.9rem;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .values-number {
+        font-size: 8rem;
+        opacity: 0.1;
+        right: -12px;
+
+    }
+    .vision-number,
+    .mission-number {
+        font-size: 8rem;
+        right: -8px;
+        top: -10px;
+    }
+
+    .cca-activities {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .cca-activities-heading {
+        font-size: 1.5rem;
+        margin: 20px 0;
+    }
+
+    .cca-activities-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cca-activities-content-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cca-activities-content-images img {
+        width: 100%;
+        height: auto !important;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    nav {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .MonogramArea {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Monogram img {
+        height: 60px !important;
+    }
+
+    .LISTS {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .listItems {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .Title-nav {
+        font-size: large;
+    }
+
+    .first-page {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .first-page-heading {
+        font-size: 2.5rem;
+        margin-left: 0;
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .first-page-text {
+        font-size: 1rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .first-page-text-area {
+        width: 100%;
+    }
+
+    .second-page {
+        height: auto;
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .second-page-title {
+        font-size: 2.5rem;
+    }
+
+    .second-page-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .second-page-box {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    .box-title {
+        font-size: 1.8rem;
+    }
+
+    .box-content {
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    .cca-activities {
+        height: auto;
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .cca-activities-heading {
+        font-size: 2rem;
+    }
+
+    .cca-activities-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cca-activities-content-text {
+        width: 100%;
+    }
+
+    .cca-activities-content-images {
+        width: 100%;
+    }
+
+    .cca-activities-content-images img {
+        width: 100%;
+        height: auto !important;
+    }
+}
+
+/* Desktop - Medium & Large (769px and above) */
+@media (min-width: 769px) {
+    nav {
+        height: 90px;
+    }
+
+    .first-page-heading {
+        font-size: 3.5rem;
+        margin-left: 75px;
+        margin-top: 230px;
+    }
+
+    .first-page-text {
+        font-size: 1.2rem;
+        margin-left: 75px;
+        width: 25rem;
+    }
+
+    .second-page-box {
+        height: 400px;
+        width: 400px;
+    }
+
+    .cca-activities-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cca-activities-content-text {
+        width: 400px;
+    }
+
+    .cca-activities-content-images img {
+        height: 250px;
+    }
 }
