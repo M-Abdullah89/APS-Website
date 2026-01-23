@@ -6,8 +6,8 @@
     --text-color: #caba9c;
     --accent-color: #8a6240;
     --bg-color-2: #4D2D18;
-    --text-color-2: #E2DED9;
     --text-color-3: #ffffff;
+    --text-color-2: #E2DED9;
 }
 
 
@@ -28,9 +28,19 @@ nav {
 
 nav ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
+nav ul svg{
+    cursor: pointer;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+nav ul svg:hover{
+    fill: var(--text-color-3);
 
+}
 nav ul li {
     margin: 10px 20px;
 }
@@ -44,7 +54,10 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--text-color-3);
 }
-
+.sidebar,.LISTS,.listItems{
+    display: flex;
+    flex-direction: column;
+}
 .LISTS {
     display: flex;
     align-items: center;
@@ -314,20 +327,21 @@ footer {
         min-height: 100vh;
         padding: 20px;
     }
-        .first-page {
+
+    .first-page {
         height: auto;
         min-height: 100vh;
         flex-direction: column;
         padding: 20px;
         background: linear-gradient(360deg,
-            rgb(5, 35, 28) 20%,
-            rgba(5, 35, 28, 0.8) 60%,
-            rgba(5, 35, 28, 0.6) 70%,
-            rgba(5, 35, 28, 0) 90%), url('Assets/CollegePic3.png');
-            /* background-attachment: fixed; */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center right;
+                rgb(5, 35, 28) 20%,
+                rgba(5, 35, 28, 0.8) 60%,
+                rgba(5, 35, 28, 0.6) 70%,
+                rgba(5, 35, 28, 0) 90%), url('Assets/CollegePic3.png');
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center right;
     }
 
     .first-page-heading {
@@ -371,7 +385,7 @@ footer {
         padding: 20px;
     }
 
-    .box-title {
+    .s .box-title {
         font-size: 1.5rem;
         margin-left: 0;
         margin-top: 20px;
@@ -402,6 +416,26 @@ footer {
         height: auto;
         min-height: 100vh;
         padding: 20px;
+    }
+
+    .cca-activities-content-images img {
+            animation: slide linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    border-radius: 12px;
+    }
+    .photo1,.photo3{
+
+    }
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateX(35%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
     }
 
     .cca-activities-heading {
@@ -548,7 +582,7 @@ footer {
         font-size: 3.5rem;
         /* margin-left: 75px; */
         /* margin-top: 230px;/ */
-                font-size: 3.5rem;
+        font-size: 3.5rem;
         text-align: left;
         margin-left: 90px;
     }
