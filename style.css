@@ -18,6 +18,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color-2);
+    font-family: Poppins, sans-serif;
+    overflow-x: hidden;
+}
+
 nav {
     font-family: Poppins;
     height: 90px;
@@ -32,15 +39,18 @@ nav ul {
     align-items: center;
     list-style: none;
 }
-nav ul svg{
+
+nav ul svg {
     cursor: pointer;
     margin: 20px;
     transition: all 0.3s ease;
 }
-nav ul svg:hover{
+
+nav ul svg:hover {
     fill: var(--text-color-3);
 
 }
+
 nav ul li {
     margin: 10px 20px;
 }
@@ -54,17 +64,42 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--text-color-3);
 }
-.sidebar{
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    background-color: var(--element-color);
-    position: fixed;
+
+.hamburger {
+    display: none;
 }
+
+.sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--element-color);
+    z-index: 9999;
+    font-size: xx-large;
+    transition: all 0.3s ease;
+}
+
+.sidebar.active {
+    display: flex;
+}
+
+.listItems-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+}
+
+.listItems-sidebar li {
+    margin: 20px 30px;
+    width: 100%;
+}
+
 .LISTS {
     display: flex;
     align-items: center;
@@ -173,7 +208,7 @@ section {
 
 @keyframes moveup {
     from {
-        transform: translateY(100%);
+        transform: translateY(80%);
     }
 
     to {
@@ -319,7 +354,9 @@ footer {
         overflow-x: hidden;
     }
 
-
+    .hamburger {
+        display: flex;
+    }
 
     .listItems {
         display: none;
@@ -390,9 +427,24 @@ footer {
         height: auto;
         margin: 0;
         padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation: moveup2 linear 0.8s forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
     }
 
-    .s .box-title {
+    @keyframes moveup2 {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0%);
+        }
+    }
+
+    .box-title {
         font-size: 1.5rem;
         margin-left: 0;
         margin-top: 20px;
@@ -426,19 +478,18 @@ footer {
     }
 
     .cca-activities-content-images img {
-            animation: slide linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-    border-radius: 12px;
+        animation: slide1 linear 0.8s forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+        border-radius: 12px;
     }
-    .photo1,.photo3{
 
-    }
-    @keyframes slide {
+    @keyframes slide1 {
         0% {
             opacity: 0;
             transform: translateX(35%);
         }
+
         100% {
             opacity: 1;
             transform: translateX(0%);
@@ -498,6 +549,10 @@ footer {
         gap: 15px;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .Title-nav {
         font-size: large;
     }
@@ -525,6 +580,28 @@ footer {
         padding: 40px 20px;
     }
 
+    .second-page-box {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation: moveup3 linear 0.8s forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    @keyframes moveup3 {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0%);
+        }
+    }
+
     .second-page-title {
         font-size: 2.5rem;
     }
@@ -539,6 +616,9 @@ footer {
         height: auto;
         margin: 0 auto;
         padding: 25px;
+        animation: moveup3 linear 0.8s forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
     }
 
     .box-title {
