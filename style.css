@@ -73,7 +73,11 @@ section {
 .first-page {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(130deg, #102820 10%, rgba(7, 7, 7, 0.274))80%, url('Assets/College\ Pic.png');
+    background: linear-gradient(110deg,
+            rgb(5, 35, 28) 20%,
+            rgba(5, 35, 28, 0.8) 50%,
+            rgba(5, 35, 28, 0.6) 60%,
+            rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.png');
     background-position: bottom 65% center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -342,6 +346,7 @@ footer {
         right: -12px;
 
     }
+
     .vision-number,
     .mission-number {
         font-size: 8rem;
