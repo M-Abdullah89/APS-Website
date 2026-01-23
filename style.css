@@ -145,6 +145,19 @@ section {
     margin: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: moveup linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes moveup {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .values {
@@ -248,7 +261,22 @@ section {
 }
 
 .cca-activities-content-images img {
+    animation: shownup linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
     border-radius: 12px;
+}
+
+@keyframes shownup {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 footer,
