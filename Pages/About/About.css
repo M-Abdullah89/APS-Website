@@ -1,0 +1,164 @@
+/* Navbar and Sidebar Styles */
+
+:root {
+    --bg-color: #102820;
+    --element-color: #4C6444;
+    --text-color: #caba9c;
+    --accent-color: #8a6240;
+    --bg-color-2: #4D2D18;
+    --text-color-3: #ffffff;
+    --text-color-2: #E2DED9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: Poppins;
+    height: 90px;
+    background-color: var(--element-color);
+    color: var(--text-color-2);
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul svg {
+    cursor: pointer;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul svg:hover {
+    fill: var(--text-color-3);
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-2);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--text-color-3);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--element-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 100dvw;
+    font-size: xx-large;
+    z-index: 9999;
+}
+
+.hamburger {
+    display: none;
+}
+
+.sidebar.active {
+    display: none;
+}
+
+.LISTS {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.listItems {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Title-nav {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+/* Mobile Styles (max-width: 953px) */
+@media (max-width: 953px) {
+    .hamburger {
+        display: flex;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .listItems {
+        display: none;
+    }
+
+    .Title-nav {
+        font-size: large;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .MonogramArea {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Monogram img {
+        height: 60px !important;
+    }
+
+    .LISTS {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .listItems {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .Title-nav {
+        font-size: large;
+    }
+}
+
+/* Desktop - Medium & Large (769px and above) */
+@media (min-width: 769px) {
+    nav {
+        height: 90px;
+    }
+}
