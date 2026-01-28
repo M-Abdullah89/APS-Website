@@ -1,5 +1,3 @@
-/* Navbar and Sidebar Styles */
-
 :root {
     --bg-color: #102820;
     --element-color: #4C6444;
@@ -14,7 +12,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--element-color) var(--bg-color);
 }
+
+body {
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--element-color);
+    border-radius: 12px;
+    border: 2px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5e7754;
+}
+
 
 nav {
     font-family: Poppins;
@@ -30,19 +54,8 @@ nav ul {
     align-items: center;
     list-style: none;
 }
-
-nav ul svg {
-    cursor: pointer;
-    margin: 20px;
-    transition: all 0.3s ease;
-}
-
-nav ul svg:hover {
-    fill: var(--text-color-3);
-}
-
 nav ul li {
-    margin: 10px 20px;
+        margin: 20px 20px;
 }
 
 nav ul li a {
@@ -56,16 +69,16 @@ nav ul li a:hover {
 }
 
 .sidebar {
+    font-size: xx-large;
     display: flex;
     flex-direction: column;
-    position: fixed;
     background-color: var(--element-color);
     position: fixed;
     top: 0;
     right: 0;
-    height: 100dvh;
-    width: 100dvw;
-    font-size: xx-large;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
     z-index: 9999;
 }
 
@@ -84,6 +97,9 @@ nav ul li a:hover {
     height: 100%;
     justify-content: space-around;
 }
+.LISTS-SIDEBAR{
+    font-size: xx-large;
+}
 
 .listItems {
     display: flex;
@@ -96,14 +112,322 @@ nav ul li a:hover {
     font-weight: bolder;
 }
 
-/* Mobile Styles (max-width: 953px) */
+section {
+    min-height: 100vh;
+    height: auto;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-color);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    gap: 30px;
+    color: var(--text-color-2);
+    font-family: Poppins;
+}
+
+.about-text {
+    width: 30rem;
+    font-size: medium;
+    text-align: left;
+    padding: 20px;
+    color: var(--text-color-2);
+    border: 2px solid var(--text-color);
+    border-radius: 12px;
+}
+
+.about-heading {
+    font-size: xx-large;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color-2);
+    font-family: 'Poppins';
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+
+.about-campus-pics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-campus-pics img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.Boys-campus-img,
+.Girls-campus-img {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.Boys-campus-img-container,
+.Girls-campus-img-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.Boys-campus-img-container::before,
+.Girls-campus-img-container::before {
+    content: 'Boys Campus';
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 10px;
+    color: var(--text-color-2);
+    z-index: 9999;
+    text-align: center;
+    background-color: #4c64446e;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.Girls-campus-img-container::before {
+    content: 'Girls Campus';
+}
+
+.School,
+.College {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subjects {
+    padding: 30px;
+}
+
+.subjects-heading {
+    text-align: center;
+    color: var(--text-color-2);
+    font-family: Poppins;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    flex-direction: column;
+    padding: 1rem 1.2rem;
+    background: var(--element-color);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.screen {
+    transform: translate(-4%, 40%);
+}
+
+.keyboard {
+    width: 240px;
+    scale: 0.86;
+    height: 170px;
+    rotate: 19deg;
+}
+
+.stethoscope {
+    width: 110px;
+    transform: translate(0px, 100px);
+    rotate: 26deg;
+    right: 0;
+}
+
+.hospital {
+    rotate: 19deg;
+    transform: translate(75%, 20%);
+}
+
+.gear {
+    transform: translate(-10%, 50%);
+}
+
+.ruler {
+    transform: translate(47%, 8%);
+    rotate: 15deg;
+}
+
+.stream-heading {
+    text-align: center;
+    color: var(--text-color-2);
+    font-family: Poppins;
+}
+
+.classes-container {
+    display: flex;
+}
+
+.year-section {
+    margin-top: 1.2rem;
+    padding: 1rem 1.1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #7fd1a3;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.year-section h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f1fff6;
+    letter-spacing: 0.2px;
+}
+
+.year-section p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #e3f1e8;
+}
+
+.School {
+    margin-top: 2rem;
+}
+
+.stream-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color-3);
+    margin-bottom: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.classes-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.program-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    flex-direction: column;
+    padding: 1rem 1.2rem;
+    background: var(--element-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.school-svg {
+    position: absolute;
+    top: -22%;
+    right: -10%;
+    opacity: 0.3;
+    z-index: -99999;
+}
+
+.school-svg2 {
+    position: absolute;
+    top: 75%;
+    left: -50px;
+    opacity: 0.3;
+}
+
+.mouse {
+    width: 150px;
+    transform: translate(10px, 0px);
+    rotate: 45deg;
+    right: 0;
+}
+
+.classes-heading {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-color-2);
+    margin-bottom: 1rem;
+    font-family: Poppins;
+}
+
+.stream-heading {
+    margin: 20px;
+    font-size: xx-large;
+}
+
+.mid-box {
+    animation: moveup1 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+
+@keyframes moveup1 {
+    from {
+        transform: translateY(25%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.side-box {
+    animation: moveup2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+
+@keyframes moveup2 {
+    from {
+        transform: translateY(50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+footer {
+    height: 100px;
+    background-color: var(--bg-color);
+    color: var(--text-color-2);
+    font-family: Poppins;
+    text-align: center;
+}
+
+footer h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 953px) {
     .hamburger {
         display: flex;
-    }
-
-    html {
-        overflow-x: hidden;
+        margin: 0px 10px;
     }
 
     .listItems {
@@ -113,9 +437,45 @@ nav ul li a:hover {
     .Title-nav {
         font-size: large;
     }
+
+    .about-text {
+        width: auto;
+    }
+
+    .mid-box {
+        animation: moveleft linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    @keyframes moveleft {
+        from {
+            transform: translateX(20%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    .side-box {
+        animation: moveright linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    @keyframes moveright {
+        from {
+            transform: translateX(-20%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
 }
 
-/* Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -154,11 +514,18 @@ nav ul li a:hover {
     .Title-nav {
         font-size: large;
     }
+
+    .about-text {
+        width: auto;
+    }
 }
 
-/* Desktop - Medium & Large (769px and above) */
 @media (min-width: 769px) {
     nav {
         height: 90px;
     }
+
+    /* .about-text {
+        width: auto; */
+
 }

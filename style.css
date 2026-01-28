@@ -14,11 +14,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--element-color) var(--bg-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--element-color);
+    border-radius: 10px;
+    border: 2px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5e7754;
+}
+
+header {
+    z-index: 99999;
+    box-shadow: 0 2px 106px 0 rgba(15, 15, 15, 0.6);
 }
 
 nav {
     font-family: Poppins;
-    height: 90px;
     background-color: var(--element-color);
     color: var(--text-color-2);
     width: 100%;
@@ -54,6 +78,9 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--text-color-3);
+}
+.monogram{
+
 }
 
 .sidebar {
@@ -105,39 +132,73 @@ section {
 
 
 .first-page {
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background: linear-gradient(110deg,
             rgb(5, 35, 28) 20%,
             rgba(5, 35, 28, 0.8) 50%,
             rgba(5, 35, 28, 0.6) 60%,
             rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.png');
-    background-position: bottom 90% center;
+    background-position: center bottom 20%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: row;
     align-items: top;
-    justify-content: space-between;
+    animation: changebg1 25s infinite;
+}
+
+@keyframes changebg1 {
+    0% {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(110deg,
+                rgb(5, 35, 28) 20%,
+                rgba(5, 35, 28, 0.8) 50%,
+                rgba(5, 35, 28, 0.6) 60%,
+                rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.png');
+        background-position: center bottom 20%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+    }
+
+    100% {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(110deg,
+                rgb(5, 35, 28) 20%,
+                rgba(5, 35, 28, 0.8) 50%,
+                rgba(5, 7, 6, 0.6) 60%,
+                rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic4.jpeg');
+        background-position: bottom 90% center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+    }
 }
 
 .first-page-heading {
-    color: var(--text-color-3);
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-left: 75px;
+    color: var(--text-color-2);
+    font-size: xx-large;
+    font-weight: 700;
     margin-top: 230px;
     font-family: Poppins;
-
+    text-align: left;
 }
 
 .first-page-text {
     color: var(--text-color-3);
-    font-size: 1.2rem;
-    margin-left: 75px;
-    margin-top: 20px;
+    font-size: medium;
     width: 25rem;
+    text-align: left;
     font-family: Poppins;
 }
 
@@ -178,7 +239,7 @@ section {
     width: 400px;
     background-color: var(--element-color);
     margin: 50px;
-    border-radius: 15px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation: moveup linear;
     animation-timeline: view();
@@ -287,9 +348,56 @@ section {
     text-align: left;
     width: 400px;
     color: var(--text-color-2);
+    animation: shownleft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+@keyframes shownleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.Events {
+    margin: 50px 0px;
+}
+
+.Events a {
+    font-family: Poppins;
+    font-weight: bold;
+    text-align: left;
+    width: 400px;
+    color: var(--text-color-2);
+    text-decoration: none;
+}
+
+.Events button {
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 71px;
+    cursor: pointer;
+    border: 2px solid var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.Events button:hover {
+    background-color: var(--element-color);
+    border: 2px solid var(--text-color-3);
+}
+
+.Events button:active {
+    transform: scale(0.95);
 }
 
 .cca-activities-content {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -326,7 +434,13 @@ footer {
     font-family: Poppins;
     text-align: center;
 }
-
+footer h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
 section {
     min-height: 100vh;
     height: auto;
@@ -371,10 +485,45 @@ section {
                 rgba(5, 35, 28, 0.8) 60%,
                 rgba(5, 35, 28, 0.6) 70%,
                 rgba(5, 35, 28, 0) 90%), url('Assets/CollegePic3.png');
-        /* background-attachment: fixed; */
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center right;
+        background-position: center right 20%;
+        animation: changebg2 30s infinite;
+    }
+
+    @keyframes changebg2 {
+        0% {
+            height: auto;
+            min-height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+            background: linear-gradient(360deg,
+                    rgb(5, 35, 28) 20%,
+                    rgba(5, 35, 28, 0.8) 60%,
+                    rgba(5, 35, 28, 0.6) 70%,
+                    rgba(5, 35, 28, 0) 90%), url('Assets/CollegePic3.png');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center right 70%;
+        }
+
+        100% {
+            height: auto;
+            min-height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+            background: linear-gradient(360deg,
+                    rgb(5, 35, 28) 20%,
+                    rgba(5, 35, 28, 0.8) 60%,
+                    rgba(5, 35, 28, 0.6) 70%,
+                    rgba(5, 35, 28, 0) 90%), url('Assets/CollegePic4.jpeg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center right 20%;
+        }
     }
 
     .first-page-heading {
@@ -385,7 +534,7 @@ section {
     }
 
     .first-page-text {
-        font-size: 0.9rem;
+        font-size: medium;
         margin-left: 0;
         width: 100%;
         text-align: center;
@@ -563,7 +712,7 @@ section {
     }
 
     .first-page-text {
-        font-size: 1rem;
+        font-size: medium;
         margin-left: 0;
         width: 100%;
         text-align: center;
@@ -641,15 +790,11 @@ section {
 
     .first-page-heading {
         font-size: 3.5rem;
-        /* margin-left: 75px; */
-        /* margin-top: 230px;/ */
-        font-size: 3.5rem;
         text-align: left;
-        margin-left: 90px;
+        margin-left: 75px;
     }
 
     .first-page-text {
-        font-size: 1.2rem;
         margin-left: 75px;
         width: 25rem;
     }
