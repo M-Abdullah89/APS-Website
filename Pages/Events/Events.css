@@ -108,6 +108,10 @@ nav ul li a:hover {
     font-weight: bolder;
 }
 
+.LISTS-SIDEBAR {
+    font-size: xx-large;
+}
+
 section {
     height: 100vw;
     width: 100vh;

@@ -79,9 +79,6 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--text-color-3);
 }
-.monogram{
-
-}
 
 .sidebar {
     display: flex;
@@ -118,7 +115,9 @@ nav ul li a:hover {
     align-items: center;
     cursor: pointer;
 }
-
+.LISTS-SIDEBAR {
+    font-size: xx-large;
+}
 .Title-nav {
     font-size: x-large;
     font-weight: bolder;
@@ -138,7 +137,7 @@ section {
             rgb(5, 35, 28) 20%,
             rgba(5, 35, 28, 0.8) 50%,
             rgba(5, 35, 28, 0.6) 60%,
-            rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.png');
+            rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.webp');
     background-position: center bottom 20%;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -157,7 +156,7 @@ section {
                 rgb(5, 35, 28) 20%,
                 rgba(5, 35, 28, 0.8) 50%,
                 rgba(5, 35, 28, 0.6) 60%,
-                rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.png');
+                rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic3.webp');
         background-position: center bottom 20%;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -174,7 +173,7 @@ section {
                 rgb(5, 35, 28) 20%,
                 rgba(5, 35, 28, 0.8) 50%,
                 rgba(5, 7, 6, 0.6) 60%,
-                rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic4.jpeg');
+                rgba(5, 35, 28, 0) 70%), url('Assets/CollegePic4.webp');
         background-position: bottom 90% center;
         background-attachment: fixed;
         background-repeat: no-repeat;

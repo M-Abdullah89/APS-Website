@@ -110,6 +110,10 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.LISTS-SIDEBAR {
+    font-size: xx-large;
+}
+
 .Title-nav {
     font-size: x-large;
     font-weight: bolder;
